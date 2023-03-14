@@ -1,0 +1,21 @@
+{
+    "name": "jvcsze/converson_moeda",
+    "description": "Projeto de conversor de moedas segundo a cotação",
+    "type": "libary",
+    "autoload": {
+        "psr-4": {
+            "Cambio\\Conversor\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Jose Victor"
+        }
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "^10.0"
+    },
+    "scripts": {
+        "test": "phpunit testes\\TestConversao.php"
+    }
+}

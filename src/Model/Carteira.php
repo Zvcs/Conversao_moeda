@@ -1,15 +1,12 @@
 <?php
 
-namespace src\cambio\Model\Carteira;
+namespace Cambio\Conversor\Model\Carteira;
 
 
 class Carteira
 {
     public function __construct(private string $nome, private float $dinheiro, private string $moeda)
     {
-        $this->nome = $nome;
-        $this->dinheiro = $dinheiro;
-        $this->moeda = $moeda;
     }
 
     public function getNome(): string

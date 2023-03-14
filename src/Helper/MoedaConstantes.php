@@ -1,6 +1,6 @@
 <?php
 
-namespace src\cambio\Helper\Moedas;
+namespace Cambio\Conversor\Helper\moedas;
 
 class Moedas
 {

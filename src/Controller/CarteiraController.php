@@ -1,18 +1,16 @@
 <?php
 
-namespace src\cambio\Controller\cambio;
+namespace Cambio\Conversor\Controller\CarteiraController;
 
-use src\cambio\Model\Carteira\Carteira;
-use src\cambio\Controller\conversao\{dolar, libra, euro, peso, real};
+use Cambio\Conversor\Model\Carteira\Carteira;
+use Cambio\Conversor\Controller\Conversao\{dolar, libra, euro, peso, real};
 
 class CarteiraController
 {
     public function __construct(private Carteira $carteira, private string $conversao)
     {
-        $this->carteira = $carteira;
-        $this->conversao = $conversao;
     }
-    
+
     public function getValorConvertido($valor): string
     {
         $valorConvertido = $this->converterValor($valor, $this->conversao);
@@ -25,5 +23,5 @@ class CarteiraController
     {
         return $moeda->converte($this->conversao, $valor);
     }
-    
+
 }

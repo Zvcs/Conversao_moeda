@@ -1,8 +1,8 @@
 <?php
 
-namespace src\cambio\Controller\conversao\libra;
+namespace Cambio\Conversor\Controller\Conversao\libra;
 
-use src\cambio\Helper\Conversao\Conversao;
+use Cambio\Conversor\Helper\valores\Conversao;
 
 class Libra
 {

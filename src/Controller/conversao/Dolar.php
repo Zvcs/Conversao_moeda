@@ -1,8 +1,8 @@
 <?php
 
-namespace src\cambio\Controller\conversao\dolar;
+namespace Cambio\Conversor\Controller\Conversao\dolar;
 
-use src\cambio\Helper\Conversao\Conversao;
+use Cambio\Conversor\Helper\valores\Conversao;
 
 class Dolar
 {
