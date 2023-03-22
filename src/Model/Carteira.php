@@ -1,6 +1,6 @@
 <?php
 
-namespace Cambio\Conversor\Model\Carteira;
+namespace Cambio\Conversor\Model;
 
 
 class Carteira

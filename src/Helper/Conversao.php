@@ -1,6 +1,6 @@
 <?php
 
-namespace Cambio\Conversor\Helper\valores;
+namespace Cambio\Conversor\Helper;
 
 
 class Conversao

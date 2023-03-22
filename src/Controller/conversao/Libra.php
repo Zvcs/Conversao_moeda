@@ -1,11 +1,17 @@
 <?php
 
-namespace Cambio\Conversor\Controller\Conversao\libra;
+namespace Cambio\Conversor\Controller\conversao;
 
-use Cambio\Conversor\Helper\valores\Conversao;
+require '../Conversao_moeda-main/vendor/autoload.php';
+
+use Cambio\Conversor\Helper\Conversao;
 
 class Libra
 {
+    public function __construct()
+    {
+    }
+
     public function converte(string $moeda, float $valor): float
     {
         switch ($moeda) {

@@ -1,9 +1,17 @@
 <?php
 
-namespace Cambio\Conversor\Controller\CarteiraController;
+namespace Cambio\Conversor\Controller;
 
-use Cambio\Conversor\Model\Carteira\Carteira;
-use Cambio\Conversor\Controller\Conversao\{dolar, libra, euro, peso, real};
+require '../Conversao_moeda-main/vendor/autoload.php';
+
+use Cambio\Conversor\Model\Carteira;
+use Cambio\Conversor\Controller\conversao\{
+    Dolar,
+    Euro,
+    Libra,
+    Peso,
+    Real
+};
 
 class CarteiraController
 {
@@ -11,17 +19,23 @@ class CarteiraController
     {
     }
 
-    public function getValorConvertido($valor): string
+    public function getConversao():string
     {
-        $valorConvertido = $this->converterValor($valor, $this->conversao);
-
-
-        return "O valor convertido para {$this->conversao} e de {$valorConvertido}";
+        return $this->conversao;
     }
 
-    private function converterValor($moeda, $valor)
+    public function getValorConvertido($valor): void
     {
-        return $moeda->converte($this->conversao, $valor);
+
+        $valorConvertido = $this->converterValor($this->conversao, $valor);
+
+        echo "O valor convertido para {$this->conversao} e de {$valorConvertido}";
+    }
+
+    private function converterValor($moeda, $valor): float
+    {
+        $converte = new $moeda();
+        return $converte->converte($this->conversao, $valor);
     }
 
 }

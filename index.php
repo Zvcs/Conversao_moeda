@@ -1,10 +1,10 @@
 <?php
 
-require_once 'vendor/autoload.php';
+require 'vendor/autoload.php';
 
-use Cambio\Conversor\Controller\CarteiraController\CarteiraController;
-use Cambio\Conversor\Helper\moedas\Moedas;
-use Cambio\Conversor\Model\Carteira\Carteira;
+use Cambio\Conversor\Controller\CarteiraController;
+use Cambio\Conversor\Helper\Moedas;
+use Cambio\Conversor\Model\Carteira;
 
 $carteira = new Carteira('Teste', 1000, Moedas::REAL);
 
